@@ -1,46 +1,21 @@
-def Login(grow):
-  print(grow)
-  frap = input() 
-  return frap 
+def request(string):
+  return input()
 
-def Pass(fog):
-  print(fog)
-  pswrd = input()
-  return pswrd
+def show_result(login, password, name, age):
+  print('Your login: {}\n'.format(login))
+  print('Your password: {}\n'.format(password))
+  print('Your name: {}\n'.format(name))
+  print("Your age: {}\n".format(age))
 
-def Name(trust):
-  print(trust)
-  urname = input()
-  return urname
-
-def Age(howold):
-  print(howold)
-  urage = input()
-  return urage
-
-def result(log,pas,name,age):
-  print("Your Login: " + log)
-  print("")
-  print("Your Password: " + pas)
-  print("")
-  print("Your Name: " + name)
-  print("")
-  print("Your Age: "+ age)
-
-def show_result_title(string):
-  print("O" * len(string))
+def show_result_title(string, top_char, bottom_char):
+  print(str(top_char) * len(string))
   print(string)
-  print("X" * len(string))
+  print(str(bottom_char) * len(string))
 
-Well = Login("Please, enter login:")
-print("")
-Next = Pass("Please, enter password:")
-print("")
-Socity = Name("Please, enter your name:")
-print("")
-Old = Age("Please, enter your age:")
-print("\n\n")
+login = request("Please, enter login:")
+password = request("Please, enter password:")
+name = request("Please, enter your name:")
+age = request("Please, enter your age:")
 
-show_result_title("="*50 + "YOUR RESULT" + "="*50)
-
-result(Well,Next,Socity,Old)
+show_result_title('Personal resume')
+show_result(login, password, name, age)
