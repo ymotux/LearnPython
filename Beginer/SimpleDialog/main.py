@@ -1,5 +1,8 @@
 def request(string):
-  return input()
+  print(string)
+  userInput = input()
+  print("")
+  return userInput
 
 def show_result(login, password, name, age):
   print('Your login: {}\n'.format(login))
@@ -11,11 +14,12 @@ def show_result_title(string, top_char, bottom_char):
   print(str(top_char) * len(string))
   print(string)
   print(str(bottom_char) * len(string))
+  print("")
 
 login = request("Please, enter login:")
 password = request("Please, enter password:")
 name = request("Please, enter your name:")
 age = request("Please, enter your age:")
 
-show_result_title('Personal resume')
+show_result_title('Personal resume', '*', '=') 
 show_result(login, password, name, age)
